@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneInbox - Unified Customer Communication</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 h-screen overflow-hidden text-gray-800">
+
+  <div class="flex h-full">
+
+    <!-- 1. LEFT SIDEBAR NAVIGATION -->
+    <aside class="w-64 bg-slate-900 text-white flex flex-col justify-between border-r border-slate-800">
+      <div>
+        <!-- Logo -->
+        <div class="p-5 flex items-center space-x-3 border-b border-slate-800">
+          <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-lg">∞</div>
+          <span class="font-bold text-xl tracking-wide">OneInbox</span>
+        </div>
+        
+        <!-- Nav Links -->
+        <nav class="p-4 space-y-1">
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg bg-slate-800 text-blue-400 font-medium">
+            <i class="fa-solid fa-inbox w-5"></i><span>Inbox</span>
+          </a>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+            <i class="fa-solid fa-users w-5"></i><span>Customers</span>
+          </a>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+            <i class="fa-solid fa-plug w-5"></i><span>Channels</span>
+          </a>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+            <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>AI Assistant</span>
+          </a>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+            <i class="fa-solid fa-file-lines w-5"></i><span>Templates</span>
+          </a>
+          <a href="#" class="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition">
+            <i class="fa-solid fa-gear w-5"></i><span>Settings</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Agent Profile -->
+      <div class="p-4 border-t border-slate-800 flex items-center space-x-3">
+        <img src="https://i.pravatar.cc/100?img=12" class="w-9 h-9 rounded-full" alt="Agent">
+        <div>
+          <p class="text-sm font-semibold">Rahul Sharma</p>
+          <p class="text-xs text-slate-400">Support Agent</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. INBOX LIST COLUMN -->
+    <section class="w-80 bg-white border-r border-gray-200 flex flex-col">
+      <!-- Header & Channel Filter -->
+      <div class="p-4 border-b border-gray-200">
+        <h1 class="text-xl font-bold text-gray-900 mb-2">Inbox</h1>
+        <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+          <span>15 Open</span> • <span>19 Unread</span> • <span class="text-red-500 font-semibold">2 Urgent</span>
+        </div>
+        
+        <!-- Filter Dropdown -->
+        <select class="w-full bg-gray-50 border border-gray-300 text-gray-700 text-sm rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500">
+          <option>All Channels</option>
+          <option>WhatsApp</option>
+          <option>Instagram</option>
+          <option>Email</option>
+          <option>Telegram</option>
+        </select>
+      </div>
+
+      <!-- Customer Cards List -->
+      <div class="flex-1 overflow-y-auto divide-y divide-gray-100">
+        <!-- Selected Customer Card -->
+        <div class="p-4 bg-blue-50/50 border-l-4 border-blue-600 cursor-pointer">
+          <div class="flex justify-between items-start mb-1">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-gray-900">Deepak Verma</span>
+              <i class="fa-brands fa-whatsapp text-green-500 text-sm"></i>
+            </div>
+            <span class="text-xs text-gray-400">4h</span>
+          </div>
+          <p class="text-xs font-medium text-gray-700 mb-1">Wholesale rates</p>
+          <p class="text-xs text-gray-500 truncate">Need wholesale rates for resellers.</p>
+          <div class="flex justify-between items-center mt-2">
+            <span class="bg-red-100 text-red-700 text-[10px] font-semibold px-2 py-0.5 rounded">High</span>
+            <span class="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</span>
+          </div>
+        </div>
+
+        <!-- Customer Card 2 -->
+        <div class="p-4 hover:bg-gray-50 cursor-pointer transition">
+          <div class="flex justify-between items-start mb-1">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-gray-900">Isha Bansal</span>
+              <i class="fa-brands fa-instagram text-pink-500 text-sm"></i>
+            </div>
+            <span class="text-xs text-gray-400">4h</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Do you offer gift packaging?</p>
+          <div class="flex justify-end mt-2">
+            <span class="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</span>
+          </div>
+        </div>
+
+        <!-- Customer Card 3 -->
+        <div class="p-4 hover:bg-gray-50 cursor-pointer transition">
+          <div class="flex justify-between items-start mb-1">
+            <div class="flex items-center space-x-2">
+              <span class="font-semibold text-gray-900">Tanvi Shah</span>
+              <i class="fa-solid fa-envelope text-blue-500 text-sm"></i>
+            </div>
+            <span class="text-xs text-gray-400">1d</span>
+          </div>
+          <p class="text-xs text-gray-500 truncate">Thanks for the quick turnaround.</p>
+          <div class="flex justify-start mt-2">
+            <span class="bg-gray-100 text-gray-600 text-[10px] font-medium px-2 py-0.5 rounded">Resolved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CONVERSATION MAIN PANEL -->
+    <main class="flex-1 bg-gray-50 flex flex-col">
+      <!-- Chat Header -->
+      <header class="p-4 bg-white border-b border-gray-200 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-gray-700">DV</div>
+          <div>
+            <h2 class="font-bold text-gray-900 flex items-center space-x-2">
+              <span>Deepak Verma</span>
+              <span class="text-xs font-normal text-green-600 bg-green-50 border border-green-200 px-2 py-0.5 rounded-full">WhatsApp</span>
+            </h2>
+            <p class="text-xs text-gray-500">Assigned to: <strong>Rahul Sharma</strong></p>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-2">
+          <button class="px-3 py-1.5 bg-green-50 text-green-700 border border-green-200 rounded-lg text-xs font-medium hover:bg-green-100">
+            <i class="fa-solid fa-check mr-1"></i> Resolve
+          </button>
+        </div>
+      </header>
+
+      <!-- Message History -->
+      <div class="flex-1 p-6 overflow-y-auto space-y-4" id="chatHistory">
+        <!-- Customer Message -->
+        <div class="flex items-end space-x-2">
+          <div class="bg-white border border-gray-200 rounded-2xl p-4 max-w-md shadow-sm">
+            <p class="text-sm text-gray-800">Need wholesale rates for resellers. We are planning an order for 500 units.</p>
+            <span class="text-[10px] text-gray-400 mt-2 block text-right">10:30 AM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strict Manual Composer -->
+      <div class="p-4 bg-white border-t border-gray-200">
+        <!-- Warning Indicator -->
+        <div class="mb-2 flex justify-between items-center text-xs text-gray-500">
+          <span>Recipient: <strong class="text-gray-800">Deepak Verma (+91 98765 43210)</strong></span>
+          <span class="text-blue-600 cursor-pointer hover:underline"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Draft</span>
+        </div>
+
+        <div class="flex space-x-2">
+          <input type="text" id="messageInput" placeholder="Type message for Deepak Verma..." class="flex-1 bg-gray-50 border border-gray-300 text-sm rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button onclick="sendMessage()" class="bg-blue-600 text-white px-5 py-3 rounded-lg font-medium text-sm hover:bg-blue-700 transition flex items-center space-x-2">
+            <span>Send</span>
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- 4. RIGHT CUSTOMER PROFILE PANEL -->
+    <aside class="w-72 bg-white border-l border-gray-200 p-5 overflow-y-auto hidden lg:block">
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 font-bold text-xl flex items-center justify-center mx-auto mb-2">DV</div>
+        <h3 class="font-bold text-gray-900">Deepak Verma</h3>
+        <p class="text-xs text-gray-500">Wholesale Buyer</p>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div>
+          <label class="text-gray-400 font-medium">PHONE</label>
+          <p class="font-semibold text-gray-800 mt-0.5">+91 98765 43210</p>
+        </div>
+        <div>
+          <label class="text-gray-400 font-medium">EMAIL</label>
+          <p class="font-semibold text-gray-800 mt-0.5">deepak@vermatraders.com</p>
+        </div>
+        <div>
+          <label class="text-gray-400 font-medium">TAGS</label>
+          <div class="flex flex-wrap gap-1 mt-1">
+            <span class="bg-gray-100 text-gray-700 px-2 py-0.5 rounded">Wholesale</span>
+            <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded">VIP</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- JavaScript for One-Customer-Reply Logic -->
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('messageInput');
+      const chatHistory = document.getElementById('chatHistory');
+      const text = input.value.trim();
+
+      if (text === '') return;
+
+      // Append Outbound Message to Chat
+      const msgBubble = document.createElement('div');
+      msgBubble.className = 'flex items-end justify-end space-x-2';
+      msgBubble.innerHTML = `
+        <div class="bg-blue-600 text-white rounded-2xl p-4 max-w-md shadow-sm">
+          <p class="text-sm">${text}</p>
+          <span class="text-[10px] text-blue-200 mt-2 block text-right">Just now</span>
+        </div>
+      `;
+      chatHistory.appendChild(msgBubble);
+      
+      // Clear Input & Scroll Bottom
+      input.value = '';
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+  </script>
+</body>
+</html>
